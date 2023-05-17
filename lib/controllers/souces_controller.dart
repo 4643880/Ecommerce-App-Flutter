@@ -6,8 +6,13 @@ class SauceController extends GetxController {
 
   List<String> get listOfSouces => _listOfSouces;
 
-  setSauces(String newSouceName) {
+  setAddSauces(String newSouceName) {
     _listOfSouces.add(newSouceName);
+    update();
+  }
+
+  setRemoveSauces(String newSouceName) {
+    _listOfSouces.remove(newSouceName);
     update();
   }
 }

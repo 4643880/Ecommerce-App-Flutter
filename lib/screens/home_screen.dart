@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:otp_project/controllers/auth_controller.dart';
 import 'package:otp_project/controllers/quantity_controller.dart';
+import 'package:otp_project/screens/login_screen.dart';
 import 'package:otp_project/widgets/description_text_widget.dart';
 import 'package:otp_project/widgets/extras_widget.dart';
 import 'package:otp_project/widgets/quantity_widget.dart';
@@ -30,6 +32,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     QuantityController controller = Get.find();
+    AuthController _authController = Get.find();
     return Scaffold(
       backgroundColor: const Color(0xfff4f7fb),
       appBar: AppBar(
@@ -45,10 +48,11 @@ class HomeScreen extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {
-              Navigator.pop(context);
+              _authController.logOut();
+              Get.to(const LoginPage());
             },
             icon: const Icon(
-              Icons.share,
+              Icons.logout,
               color: Colors.black,
             ),
           ),

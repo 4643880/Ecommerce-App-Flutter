@@ -54,7 +54,7 @@ class DipsAndSaucesWidget extends StatelessWidget {
               ),
             ),
             Container(
-              height: 110,
+              height: 120,
               child: ListView.builder(
                 itemCount: soucesList.length,
                 itemBuilder: (context, index) {
@@ -71,9 +71,10 @@ class DipsAndSaucesWidget extends StatelessWidget {
                                   onTap: () {
                                     if (myController.listOfSouces.contains(
                                         eachItem["title"].toString())) {
-                                      null;
+                                      myController.setRemoveSauces(
+                                          eachItem["title"].toString());
                                     } else {
-                                      myController.setSauces(
+                                      myController.setAddSauces(
                                           eachItem["title"].toString());
                                     }
                                   },
@@ -82,7 +83,7 @@ class DipsAndSaucesWidget extends StatelessWidget {
                                     decoration: BoxDecoration(
                                       color: myController.listOfSouces
                                               .contains(eachItem["title"])
-                                          ? Color(0xffeb7039)
+                                          ? const Color(0xffeb7039)
                                           : Colors.grey,
                                       // border: Border.all(
                                       //   color: const Color(0xffc7d1d9),

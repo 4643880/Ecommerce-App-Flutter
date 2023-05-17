@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'dart:developer' as devtools show log;
 
 import 'package:otp_project/screens/home_screen.dart';
+import 'package:otp_project/screens/login_screen.dart';
 import 'package:otp_project/utils/helper.dart' as di;
 
 void main() async {
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomeScreen(),
+      home: LoginPage(),
     );
   }
 }
