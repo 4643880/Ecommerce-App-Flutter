@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:otp_project/controllers/auth_controller.dart';
 import 'package:otp_project/controllers/quantity_controller.dart';
 import 'package:otp_project/screens/login_screen.dart';
+import 'package:otp_project/utils/routes.dart';
 import 'package:otp_project/widgets/description_text_widget.dart';
 import 'package:otp_project/widgets/extras_widget.dart';
 import 'package:otp_project/widgets/quantity_widget.dart';
@@ -49,7 +50,7 @@ class HomeScreen extends StatelessWidget {
           IconButton(
             onPressed: () {
               _authController.logOut();
-              Get.to(const LoginPage());
+              Get.toNamed(MyRoutes.login_route);
             },
             icon: const Icon(
               Icons.logout,

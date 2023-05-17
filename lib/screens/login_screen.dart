@@ -5,6 +5,8 @@ import 'package:otp_project/controllers/auth_controller.dart';
 import 'package:otp_project/screens/verify_otp_screen.dart';
 import 'dart:developer' as devtools show log;
 
+import 'package:otp_project/utils/routes.dart';
+
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
 
@@ -108,7 +110,7 @@ class _LoginPageState extends State<LoginPage> {
                         context,
                         phoneNumber: phoneNumber,
                       );
-                      Get.to(const VerifyOtpPage());
+                      Get.toNamed(MyRoutes.verify_otp_route);
                     },
                     child: const Text(
                       "Login",

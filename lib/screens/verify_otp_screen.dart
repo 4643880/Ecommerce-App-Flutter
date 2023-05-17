@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:otp_project/controllers/auth_controller.dart';
 import 'package:otp_project/screens/home_screen.dart';
+import 'package:otp_project/utils/routes.dart';
 
 class VerifyOtpPage extends StatefulWidget {
   const VerifyOtpPage({Key? key}) : super(key: key);
@@ -87,7 +88,7 @@ class _VerifyOtpPageState extends State<VerifyOtpPage> {
                         otp: _otpController.text,
                       );
 
-                      Get.to(HomeScreen());
+                      Get.toNamed(MyRoutes.home_route);
                     },
                     child: const Text(
                       "Verify",
