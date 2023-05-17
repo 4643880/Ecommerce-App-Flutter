@@ -32,30 +32,46 @@ class _MyDropDownWidgetState extends State<MyDropDownWidget> {
         ),
         Container(
           height: 50,
+          width: MediaQuery.of(context).size.width,
           decoration: BoxDecoration(
             border: Border.all(color: Colors.black),
             borderRadius: BorderRadius.circular(10),
           ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              const Text(
-                "   " + "Select Quantity",
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-              ),
-              DropdownButton(
-                value: widget.selectedValueOfItem,
-                items: widget.getDropdownMenuItems,
-                onChanged: (value) {
-                  setState(() {
-                    print(value);
-                    widget.selectedValueOfItem = value!;
-                  });
-                },
-              ),
-            ],
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 03),
+            child: DropdownButton(
+              isExpanded: true,
+              underline: const SizedBox(),
+              value: widget.selectedValueOfItem,
+              items: widget.getDropdownMenuItems,
+              onChanged: (value) {
+                setState(() {
+                  print(value);
+                  widget.selectedValueOfItem = value!;
+                });
+              },
+            ),
           ),
+          // child: Row(
+          //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          //   children: [
+          //     const Text(
+          //       "   " + "Select Quantity",
+          //       maxLines: 1,
+          //       overflow: TextOverflow.ellipsis,
+          //     ),
+          //     DropdownButton(
+          //       value: widget.selectedValueOfItem,
+          //       items: widget.getDropdownMenuItems,
+          //       onChanged: (value) {
+          //         setState(() {
+          //           print(value);
+          //           widget.selectedValueOfItem = value!;
+          //         });
+          //       },
+          //     ),
+          //   ],
+          // ),
         ),
       ],
     );

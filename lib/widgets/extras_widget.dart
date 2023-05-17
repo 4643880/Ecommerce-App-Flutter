@@ -13,9 +13,13 @@ class ExtrasWidget extends StatefulWidget {
 
 class _ExtrasWidgetState extends State<ExtrasWidget> {
   // For Quantity
-  String selectedValueOfQuantity = "One";
+  String selectedValueOfQuantity = "Choose an Option";
   List<DropdownMenuItem<String>> get dropdownItemsOfQuantity {
     List<DropdownMenuItem<String>> menuItems = [
+      const DropdownMenuItem(
+        value: "Choose an Option",
+        child: Text("Choose an Option"),
+      ),
       const DropdownMenuItem(value: "One", child: Text("One")),
       const DropdownMenuItem(value: "Two", child: Text("Two")),
       const DropdownMenuItem(value: "Three", child: Text("Three")),
@@ -25,9 +29,13 @@ class _ExtrasWidgetState extends State<ExtrasWidget> {
   }
 
   // Increase Quantity
-  String selectedValueOfIncreasedItems = "1 Kg";
+  String selectedValueOfIncreasedItems = "Choose an Option";
   List<DropdownMenuItem<String>> get dropdownItemsIncreasedItems {
     List<DropdownMenuItem<String>> menuItems = [
+      const DropdownMenuItem(
+        value: "Choose an Option",
+        child: Text("Choose an Option"),
+      ),
       const DropdownMenuItem(value: "1 Kg", child: Text("1 Kg")),
       const DropdownMenuItem(value: "2 Kg", child: Text("2 Kg")),
       const DropdownMenuItem(value: "3 Kg", child: Text("3 Kg")),
