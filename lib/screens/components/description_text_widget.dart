@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:otp_project/controllers/height_controller.dart';
 
-import '../constants/constants.dart';
+import '../../constants/constants.dart';
 
 class DescriptionTextWidget extends StatefulWidget {
   final String text;

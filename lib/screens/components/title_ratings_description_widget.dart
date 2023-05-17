@@ -3,9 +3,7 @@ import 'package:get/get.dart';
 import 'package:otp_project/controllers/height_controller.dart';
 import 'dart:developer' as devtools show log;
 
-import 'package:otp_project/widgets/description_text_widget.dart';
-
-import '../constants/constants.dart';
+import 'package:otp_project/screens/components/description_text_widget.dart';
 
 class TitleRatingsDescriptionWidget extends StatelessWidget {
   const TitleRatingsDescriptionWidget({

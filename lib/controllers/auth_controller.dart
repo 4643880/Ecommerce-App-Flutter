@@ -34,7 +34,6 @@ class AuthController extends GetxController {
         _verificationId = verificationId;
       },
     );
-    Get.to(VerifyOtpPage());
   }
 
   // =======================================================
@@ -47,9 +46,9 @@ class AuthController extends GetxController {
     try {
       UserCredential userCredential =
           await _auth.signInWithCredential(phoneAuthCredential);
-      if (userCredential.user != null) {
-        Get.to(HomeScreen());
-      }
+      // if (userCredential.user != null) {
+      //   Get.to(HomeScreen());
+      // }
     } catch (e) {
       showErrorDialog(context, "Something Went Wrong", e.toString());
     }
@@ -75,6 +74,6 @@ class AuthController extends GetxController {
   // =======================================================
   void logOut() async {
     await _auth.signOut();
-    Get.to(const LoginPage());
+    // Get.to(const LoginPage());
   }
 }

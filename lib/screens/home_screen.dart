@@ -3,16 +3,16 @@ import 'package:get/get.dart';
 import 'package:otp_project/controllers/auth_controller.dart';
 import 'package:otp_project/controllers/quantity_controller.dart';
 import 'package:otp_project/screens/login_screen.dart';
-import 'package:otp_project/utils/routes.dart';
-import 'package:otp_project/widgets/description_text_widget.dart';
-import 'package:otp_project/widgets/extras_widget.dart';
-import 'package:otp_project/widgets/quantity_widget.dart';
-import 'package:otp_project/widgets/slider.dart';
+import 'package:otp_project/config/routes.dart';
+import 'package:otp_project/screens/components/description_text_widget.dart';
+import 'package:otp_project/screens/components/extras_widget.dart';
+import 'package:otp_project/screens/components/quantity_widget.dart';
+import 'package:otp_project/screens/components/slider.dart';
 import 'dart:developer' as devtools show log;
 
-import 'package:otp_project/widgets/title_ratings_description_widget.dart';
+import 'package:otp_project/screens/components/title_ratings_description_widget.dart';
 
-import '../widgets/dips_and_souces.dart';
+import 'components/dips_and_souces.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
@@ -50,7 +50,7 @@ class HomeScreen extends StatelessWidget {
           IconButton(
             onPressed: () {
               _authController.logOut();
-              Get.toNamed(MyRoutes.login_route);
+              Get.toNamed(MyRoutes.splash_route);
             },
             icon: const Icon(
               Icons.logout,

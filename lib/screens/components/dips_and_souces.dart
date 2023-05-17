@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../controllers/souces_controller.dart';
+import '../../controllers/souces_controller.dart';
 
 class DipsAndSaucesWidget extends StatelessWidget {
   DipsAndSaucesWidget({
